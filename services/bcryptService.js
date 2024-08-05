@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt');
 
 /**
- * Obtiene una contraseña sin cifrar y devuelve una contraseña encriptada
+ * Gets unencrypted password. Returns the password encrypted
  * @param {*} password 
  * @returns 
  */
@@ -11,7 +11,7 @@ const hashPassword = async (password) => {
 };
 
 /**
- * Obtiene una contraseña sin encriptar y una contraseña cifrada (almacenada en bd) y las compara
+ * Gets unencrypted password and the encrypted password.
  * @param {*} inputPassword 
  * @param {*} storedPassword 
  * @returns 
@@ -20,4 +20,4 @@ const comparePassword = async (inputPassword, storedPassword) => {
     return await bcrypt.compare(inputPassword, storedPassword);
 };
 
-module.exports = { hashPassword, comparePassword};
+module.exports = { hashPassword, comparePassword };
