@@ -196,11 +196,13 @@ https://www.postman.com/
     - eventId: ID del evento para el cual enviar la actualización.
 
 ##### Obtener Notificaciones de un Usuario
-- Endpoint: GET /api/notifications/user
+- Endpoint: 
+    ``` js 
+    GET /api/notifications/user
+    ```
 - Headers:
-``` json
-Copiar código
-{
-  "Authorization": "Bearer {tu_token}"
-}
-```
+    ``` json
+    {
+        "Authorization": "Bearer {tu_token}"
+    }
+    ```
