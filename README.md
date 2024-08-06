@@ -1,46 +1,44 @@
 # Proyecto Capstone - Sistema de Gestión de Eventos
 
 ## Descripción:
+El Sistema de Gestión de Eventos es una aplicación web que permite a los usuarios organizar y gestionar diversos tipos de eventos, como conferencias, talleres y reuniones. Los usuarios pueden crear eventos, registrarse para asistir, gestionar la lista de asistentes y recibir notificaciones de eventos.
 
-Desarrollar una aplicación web que permita a los usuarios organizar y gestionar eventos. Los usuarios podrán crear eventos, registrarse para asistir a eventos, gestionar la lista de asistentes y recibir notificaciones de eventos. El sistema deberá permitir la gestión de diferentes tipos de eventos (conferencias, talleres, reuniones) y ofrecer una interfaz intuitiva para los organizadores y asistentes.
+## Tecnologías Utilizadas
 
-## Objetivos de Aprendizaje:
+- Backend: Node.js, Express.js
+- Base de Datos: MongoDB, Mongoose
+- Autenticación: JWT, sesiones y cookies
+- Notificaciones: Nodemailer para correo electrónico
+- API RESTful: Implementada para la gestión de eventos y usuarios
 
-- Utilizar Node.js y Express.js para desarrollar una aplicación web completa.
-- Implementar un patrón MVC para estructurar la aplicación.
-- Utilizar MongoDB y Mongoose para la gestión de datos.
-- Implementar autenticación de usuarios utilizando sesiones, cookies y JWT.
-- Diseñar y consumir APIs RESTful.
-- Integrar servicios de notificaciones por correo electrónico.
-- Refactorizar y optimizar el código para un mejor rendimiento.
+## Instalación y Configuración
 
-## Requisitos del Proyecto:
+### Prerrequisitos
+Asegúrate de tener instalado Git, Node.js y MongoDB en tu máquina.
 
-1. Registro y Autenticación de Usuarios:
-    - Registro de nuevos usuarios.
-    - Autenticación mediante sesiones y cookies, o Autenticación con JWT.
+### Clonar el Repositorio
+```
+git clone https://github.com/YaragSerdna/ProyectoCapstone.git
 
-2. Gestión de Eventos:
-    - Creación, edición y eliminación de eventos.
-    - Visualización de la lista de eventos disponibles.
-    - Registro de usuarios para asistir a eventos.
-    - Gestión de la lista de asistentes y confirmación de asistencia.
+cd ProyectoCapstone
+```
+### Instalar Dependencias
+```
+npm install
+```
 
-2. Interfaz de Usuario:
-    - Panel de usuario para la gestión de eventos creados y registrados.
-    - Visualización de detalles de eventos y registro para asistir.
-    - Panel de administración para la gestión de todos los eventos y usuarios.
+### Configurar Variables de Entorno
+Crea un archivo .env en el directorio raíz del proyecto y agrega las siguientes variables:
 
+```
+MONGODB_URI=mongodb://localhost:27017/
+APP_PORT=3000
+JWT_SECRET=tu_secreto_jwt
+EMAIL_USER=tu_email
+EMAIL_PASS=tu_contraseña
+```
 
-3. APIs RESTful:
-    - Creación de APIs para la gestión de eventos, usuarios y registros. (Implementando Express)
-
-4. Gestión de Roles:
-    - Diferenciación entre usuarios regulares y administradores.
-    - Permisos específicos para la creación y gestión de eventos.
-
-## Funcionalidades Adicionales (Opcionales):
-
-1. Notificaciones:
-    - Envío de correos electrónicos de confirmación y recordatorios de eventos.
-    - Notificaciones de cambios en los eventos (e.g., cancelaciones, cambios de horario).
+### Iniciar la Aplicación
+```
+npm run dev
+```
